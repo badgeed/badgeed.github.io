@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Badge Ecole Directe</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="Logo_fED.png">
+    <link rel="stylesheet" media="screen and (max-width: 1081px)" href="ptres.css" />
+    <link rel="stylesheet" media="screen and (min-width: 1080px)" href="granderesolution.css">
+    
+
+  </head>
+
+  <body style="background-color:#001C2F;">
+    
+    <p class="pctel">Site disponible uniquement sur téléphone</p>
+    <p><label class="Prénom">Pr&eacutenom <input class="zopre" type="text" id="Prénom1"></label></p>
+    <p><label class="Nom">NOM<input class="zono" onblur="this.value=this.value.toUpperCase()" type="text" id="Nom1"></label></p>
+
+    <p class="classe">Classe <select id="Classe1" class="p2" name="p1"><option value="Seconde 1">Seconde 1</option><option value="Seconde 2">Seconde 2</option><option value="Seconde 3">Seconde 3</option><option value="Seconde 4">Seconde 4</option><option value="Seconde 5">Seconde 5</option><option value="Seconde 6">Seconde 6</option><option value="Seconde 7">Seconde 7</option><option value="Seconde 8">Seconde 8</option><option value="Première G1">Première G1</option><option value="Première G2">Première G2</option><option value="Première G3">Première G3</option><option value="Première G4">Première G4</option><option value="Première G5">Première G5</option><option value="Première G6">Première G6</option><option value="Première G7">Première G7</option><option value="Première G8">Première G8</option><option value="Première G9">Première G9</option><option value="Première STI2D">Première STI2D</option><option value="Terminale G1">Terminale G1</option><option value="Terminale G2">Terminale G2</option><option value="Terminale G3">Terminale G3</option><option value="Terminale G4">Terminale G4</option><option value="Terminale G5">Terminale G5</option><option value="Terminale G6">Terminale G6</option><option value="Terminale G7">Terminale G7</option><option value="Terminale G8">Terminale G8</option><option value="Terminale G9">Terminale G9</option><option value="Terminale STI2D">Terminale STI2D</option></select></p>
+
+    <p id="Jours" class="jdas">Jour(s) d'inscription au self :</p>
+    <div class="divjdi">
+    <label class="lundi9"><input type="checkbox" class="chekboxl" id="Lundi" onclick="Lundi1();">Lundi</label>
+    <label class="lundi9"><input class="chekboxl" type="checkbox" id="Mardi" onclick="Mardi1();">Mardi</label>
+    <label class="lundi9" ><input class="chekboxl" type="checkbox" id="Mercredi" onclick="Mercredi1();">Mercredi</label>
+    <label class="lundi9"><input class="chekboxl" type="checkbox" id="Jeudi" onclick="Jeudi1();">Jeudi</label>
+    <label class="lundi9"><input class="chekboxl" type="checkbox" id="Vendredi" onclick="Vendredi1();">Vendredi</label></div>
+
+    <div class="photoinput">Photo (au format carré):
+    <input class="chosirunfichier" type="file" accept="image/*" onchange="loadFile(event)"></div>
+  
+  
+
+    <div><p><input class="btngen" type="button" name="submit" value="G&eacute;n&eacute;rer" onclick="Generer();"></p></div>
+    
+    <script>
+      var loadFile = function(event) {
+        var output = document.getElementById('output');
+        output.src = URL.createObjectURL(event.target.files[0]);
+        output.onload = function() {
+          URL.revokeObjectURL(output.src)
+        }
+      };
+    </script>
+    
+    
+    
+    <div class="Imgvierge">
+      <img id="output" class="PP" />
+      <img  class="Imgv" src="ImageVierge.gif" alt="image"> 
+
+      <p><div id="PrénomNom" class="texte_centrer"></div></p>
+      <p><div id="Classe" class="Classe"></div></p>
+      <p><div id="Regime" class="Regime1"></div></p>
+      <img id= "CrgriseL" class="CrgriseL" src="Fondblanc.png" alt="image">
+      <img id= "CrgriseM" class="CrgriseM" src="Fondblanc.png" alt="image">
+      <img id= "CrgriseMe" class="CrgriseMe" src="Fondblanc.png" alt="image">
+      <img id= "CrgriseJ" class="CrgriseJ" src="Fondblanc.png" alt="image">
+      <img id= "CrgriseV" class="CrgriseV" src="Fondblanc.png" alt="image">
+      
+      <p id="heure_exacte" class="heureetdate"></p></div>
+      
+  
+    <script src="app.js"></script>
+       
+  </body>
+</html>
